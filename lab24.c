@@ -2,7 +2,7 @@
 #include <string.h>
 #include "tree.h"
 
-// меняет числа местами
+
 void swap1(int *a,int *b)
 {
 	int t1=*a;
@@ -10,7 +10,7 @@ void swap1(int *a,int *b)
 	*b=t1;
 }
 
-// поиск первого вхождения символа в строке с шагом перебора
+
 int find_from1(char *a,int alen,int from,char b,int step)
 {
 	for(int i=from;i>=0 && i<alen;i+=step)
@@ -19,7 +19,6 @@ int find_from1(char *a,int alen,int from,char b,int step)
 	return -1;
 }
 
-// получить приоритет операции по символу
 int get_operator_priority1(char a)
 {
 	if(a=='+' || a=='-')
@@ -29,7 +28,7 @@ int get_operator_priority1(char a)
 	return -1;
 }
 
-// расставить приоритет операций в выражении
+
 char *get_priority1(char *a)
 {
 	int len1=strlen(a);
@@ -87,7 +86,7 @@ char *get_priority1(char *a)
 	return ret1;
 }
 
-// выделить строку в куче
+
 char *str_in_heap1(char *a)
 {
 	int l1=strlen(a);
@@ -97,7 +96,6 @@ char *str_in_heap1(char *a)
 	return ret1;
 }
 
-// получить подстроку в куче
 char *substr1(char *a,int fr,int to)
 {
 	char *ret1=malloc(to-fr+1);
@@ -106,7 +104,7 @@ char *substr1(char *a,int fr,int to)
 	return ret1;
 }
 
-// развернуть операцию в дерево
+
 tnode *create_operator1(char *str,char *pri,int len)
 {
 	int mx1=0;
@@ -131,7 +129,7 @@ tnode *create_operator1(char *str,char *pri,int len)
 	return ret1;
 }
 
-// развернуть выражение в дерево
+
 tnode *convert_to_tree1(char *a)
 {
 	int len1=strlen(a);
@@ -144,7 +142,7 @@ tnode *convert_to_tree1(char *a)
     return ret1;
 }
 
-// количество отрицательных членов
+
 void neg_cnt1(tnode *a,int *b)
 {
 	if(a==NULL)
